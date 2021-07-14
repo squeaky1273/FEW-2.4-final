@@ -2,8 +2,8 @@
 
 ## Challenges
 - [x] Challenge 1: React Native
-- [ ] Challenge 2: Use React Navigation
-- [ ] Challenge 3: Add icons
+- [x] Challenge 2: Use React Navigation
+- [x] Challenge 3: Add icons
 - [ ] Challenge 4: Band tab
 - [ ] Challenge 5: Format and Style band cell
 - [ ] Challenge 6: Stats Tab

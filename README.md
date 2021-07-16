@@ -6,8 +6,8 @@
 - [x] Challenge 3: Add icons
 - [x] Challenge 4: Band tab
 - [x] Challenge 5: Format and Style band cell
-- [ ] Challenge 6: Stats Tab
-- [ ] Challenge 7: Style your work
+- [x] Challenge 6: Stats Tab
+- [x] Challenge 7: Style your work
 - [ ] Challenge 8: Conditional styles
-- [ ] Challenge 9: Styles of Metal
-- [ ] Challenge 10: List the Styles
+- [x] Challenge 9: Styles of Metal
+- [x] Challenge 10: List the Styles

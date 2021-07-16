@@ -37,13 +37,13 @@ export default function App() {
           },
         })}
         tabBarOptions={{
-          activeTintColor: 'white',
-          inactiveTintColor: 'lightgrey',
+          activeTintColor: '#f00',
+          inactiveTintColor: '#600',
           labelStyle: {
             fontSize: 15
           },
           style: {
-            backgroundColor: '#303030',
+            backgroundColor: '#000',
             paddingTop: 10,
             paddingBottom: 5,
             flex: 0.07,

@@ -7,31 +7,32 @@ function Separator() {
     return <View style={{ borderBottomWidth: 1, borderBottomColor: '#a9a9a9' }} />
 }
 
-const image = { uri: "https://wallpapercave.com/wp/6weLGjt.jpg" };
-
 function Bands() {
+    const active_bands = bands.filter((band) => {
+        return band.split === "-"
+      })
+    
+    const inactive_bands = bands.filter((band) => {
+        return band.split !== "-"
+    })
     return (
-        <View style={styles.container}>
-            <ImageBackground
-                source={image}
-                resizeMode="cover"
-                style={styles.image}
-            >     
-                <Text style={styles.heading}>Bands</Text>
-                <FlatList
-                data={bands}
-                keyExtractor={(item) => item.band_name}
-                ItemSeparatorComponent={() => Separator()}
-                renderItem={({ item }) => (
-                    <View style={styles.bandListContainer}>
-                        <Text style={styles.title}>{item.band_name}</Text>
-                        <View>
-                        <Text style={styles.text}>Origin: {item.origin}{"\n"}Fan Count: {item.fans}{"\n"}Formed: {item.formed}</Text>
-                        </View>
+        <View style={styles.container}>   
+            <Text style={styles.heading}>Bands</Text>
+            <FlatList
+            data={bands}
+            keyExtractor={(item) => item.band_name}
+            ItemSeparatorComponent={() => Separator()}
+            renderItem={({ item }) => (
+                <View style={styles.bandListContainer}>
+                    <Text style={styles.name_text}>{item.band_name}</Text>
+                    <View>
+                    <Text style={styles.name_text}>Origin: {item.origin}{"\n"}</Text>
+                    <Text style={styles.fan_text}>Fan Count: {item.fans}{"\n"}</Text>
+                    <Text style={styles.origin_text}>Formed: {item.formed}</Text>
                     </View>
-                )}
-                />
-            </ImageBackground>
+                </View>
+            )}
+            />
         </View>
       )
 }
@@ -41,33 +42,43 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: "column",
         width: "100%",
+        backgroundColor: "black"
       },
     heading: {
-      fontSize: 36,
+      fontSize: 30,
       fontWeight: 'bold',
       margin: 20,
       paddingTop: 50,
-      color: "white",
+      color: "#fff",
     },
     bandListContainer: {
 		padding: 10,
 		margin: 1,
+        backgroundColor: "black"
     },
     title: {
         flex: 1,
-        fontSize: 25,
+        fontSize: 18,
         fontWeight: '400',
-        color: "white",
+        color: "#fff",
     },
-    text: {
-        fontSize: 15,
+    name_text: {
+        fontSize: 18,
         flex: 1,
         flexGrow: 1,
-        color: "white",
+        color: "#999",
     },
-    image: {
+    fan_text: {
+        fontSize: 12,
         flex: 1,
-        justifyContent: "center"
+        flexGrow: 1,
+        color: "#999",
+    },
+    origin_text: {
+        fontSize: 18,
+        flex: 1,
+        flexGrow: 1,
+        color: "#999",
     },
 })
 
